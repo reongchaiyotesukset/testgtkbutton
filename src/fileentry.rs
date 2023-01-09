@@ -12,10 +12,13 @@ impl makeEntry{
 			let liststore = gtk::ListStore::new(&[glib::Type::STRING]);
 			completion.set_model(Some(&liststore));
 			completion.set_text_column(0);
-
-			let Apple: Option<u32> = Some(0);
-			liststore.insert_with_values(Apple, &[(0, &"Apple")]);
-            liststore.insert_with_values(Apple, &[(0, &"Banana")]);
+		    let var_u32: Option<u32> = Some(0);
+			liststore.insert_with_values(Some(0), &[(0, &"Computer")]);
+            liststore.insert_with_values(Some(0), &[(0, &"Ram")]);
+            liststore.insert_with_values(Some(0), &[(0, &"Mainboard")]);
+            liststore.insert_with_values(Some(0), &[(0, &"CPU")]);
+            liststore.insert_with_values(Some(0), &[(0, &"VGA Card")]);
+            liststore.insert_with_values(Some(0), &[(0, &"USB")]);
 		completion
      }
      
